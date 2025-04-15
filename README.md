@@ -20,14 +20,19 @@ Asegúrate de tener instalado:
    git clone https://github.com/arturoFIIS/genCodeGherkin.git
    cd genCodeGherkin
 
-2.Crea un entorno virtual (opcional pero recomendado):
-python -m venv .venv
-source .venv/bin/activate  # En Windows: .venv\Scripts\activate
+2. Crea un entorno virtual (opcional pero recomendado):
 
-Instala las dependencias:
-pip install -r requirements.txt
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # En Windows: .venv\Scripts\activate
+
+3. Instala las dependencias:
+   ```bash
+   pip install -r requirements.txt
 
 
 Uso
 Ejecuta el archivo principal para iniciar la interfaz gráfica:
-python main.py
+   
+   ```bash
+   python main.py

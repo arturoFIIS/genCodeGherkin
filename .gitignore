@@ -12,3 +12,5 @@ Thumbs.db
 
 # ignorar la carpeta "salida" y su contenido
 salida/
+# ignorar la carpeta "data" y su contenido
+data/

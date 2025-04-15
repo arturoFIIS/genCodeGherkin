@@ -1,0 +1,82 @@
+<!-- filepath: f:\TESIS GENCODE\generador-de-codigos\version2\templates\base.html.j2 -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ pantalla }}</title>
+    <link href="../static/css/tailwind-all.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800 p-6">
+    <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
+        <h1 class="text-2xl font-bold mb-6">{{ pantalla }}</h1>
+        <form class="space-y-4">
+            {% for componente in componentes %}
+                {% if componente.tipo == 'text' %}
+                    <div>
+                        <label for="{{ componente.nombre }}" class="block text-sm font-medium text-gray-700">{{ componente.nombre }}</label>
+                        <input type="text" id="{{ componente.nombre }}" name="{{ componente.nombre }}" class="mt-1 block w-1/2 rounded-md border-gray-300 shadow-md focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm bg-white text-gray-900">
+                    </div>
+                {% elif componente.tipo == 'dropdown' %}
+                    <div>
+                        <label for="{{ componente.nombre }}" class="block text-sm font-medium text-gray-700">{{ componente.nombre }}</label>
+                        <select id="{{ componente.nombre }}" name="{{ componente.nombre }}" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                            <option value="opcion1">Opción 1</option>
+                            <option value="opcion2">Opción 2</option>
+                        </select>
+                    </div>
+                {% elif componente.tipo == 'checkbox' %}
+                    <div class="flex items-center">
+                        <input type="checkbox" id="{{ componente.nombre }}" name="{{ componente.nombre }}" class="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500">
+                        <label for="{{ componente.nombre }}" class="ml-2 block text-sm text-gray-700">{{ componente.nombre }}</label>
+                    </div>
+                {% elif componente.tipo == 'radio' %}
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">{{ componente.nombre }}</label>
+                        {% for opcion in componente.opciones %}
+                            <div class="flex items-center">
+                                <input type="radio" id="{{ opcion }}" name="{{ componente.nombre }}" value="{{ opcion }}" class="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500">
+                                <label for="{{ opcion }}" class="ml-2 text-sm text-gray-700">{{ opcion }}</label>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% elif componente.tipo == 'date' %}
+                    <div>
+                        <label for="{{ componente.nombre }}" class="block text-sm font-medium text-gray-700">{{ componente.nombre }}</label>
+                        <input type="date" id="{{ componente.nombre }}" name="{{ componente.nombre }}" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm bg-white text-gray-900">
+                    </div>
+                {% elif componente.tipo == 'time' %}
+                    <div>
+                        <label for="{{ componente.nombre }}" class="block text-sm font-medium text-gray-700">{{ componente.nombre }}</label>
+                        <input type="time" id="{{ componente.nombre }}" name="{{ componente.nombre }}" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm bg-white text-gray-900">
+                    </div>
+                {% elif componente.tipo == 'slider' %}
+                    <div>
+                        <label for="{{ componente.nombre }}" class="block text-sm font-medium text-gray-700">{{ componente.nombre }}</label>
+                        <input type="range" id="{{ componente.nombre }}" name="{{ componente.nombre }}" min="0" max="100" class="mt-1 block w-full">
+                    </div>
+                {% elif componente.tipo == 'textarea' %}
+                    <div>
+                        <label for="{{ componente.nombre }}" class="block text-sm font-medium text-gray-700">{{ componente.nombre }}</label>
+                        <textarea id="{{ componente.nombre }}" name="{{ componente.nombre }}" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm bg-white text-gray-900"></textarea>
+                    </div>
+                {% elif componente.tipo == 'switch' %}
+                    <div class="flex items-center">
+                        <label for="{{ componente.nombre }}" class="block text-sm font-medium text-gray-700 mr-4">{{ componente.nombre }}</label>
+                        <input type="checkbox" id="{{ componente.nombre }}" name="{{ componente.nombre }}" class="h-6 w-11 rounded-full bg-gray-300 focus:ring-indigo-500">
+                    </div>
+                {% elif componente.tipo == 'button' %}
+                    <button type="button" class="px-4 py-2 bg-indigo-600 text-white rounded-md shadow hover:bg-indigo-700">{{ componente.nombre }}</button>
+                {% endif %}
+            {% endfor %}
+            {% if not componentes|selectattr("tipo", "equalto", "button")|list %}
+                <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-md shadow hover:bg-blue-700">Enviar</button>
+            {% endif %}
+        </form>
+    </div>
+    <!-- Scripts externos -->
+    {% for script in externalScripts %}
+        {{ script|safe }}
+    {% endfor %}
+</body>
+</html>

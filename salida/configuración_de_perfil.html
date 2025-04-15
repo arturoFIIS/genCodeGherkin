@@ -1,0 +1,70 @@
+<!-- filepath: f:\TESIS GENCODE\generador-de-codigos\version2\templates\base.html.j2 -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración de perfil</title>
+    <link href="../static/css/tailwind-all.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800 p-6">
+    <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
+        <h1 class="text-2xl font-bold mb-6">Configuración de perfil</h1>
+        <form class="space-y-4">
+            
+                
+                    <div>
+                        <label for="Nombre" class="block text-sm font-medium text-gray-700">Nombre</label>
+                        <input type="text" id="Nombre" name="Nombre" class="mt-1 block w-1/2 rounded-md border-gray-300 shadow-md focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm bg-white text-gray-900">
+                    </div>
+                
+            
+                
+                    <div>
+                        <label for="Dirección" class="block text-sm font-medium text-gray-700">Dirección</label>
+                        <input type="text" id="Dirección" name="Dirección" class="mt-1 block w-1/2 rounded-md border-gray-300 shadow-md focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm bg-white text-gray-900">
+                    </div>
+                
+            
+                
+                    <div class="flex items-center">
+                        <input type="checkbox" id="Deseo recibir notificaciones por correo" name="Deseo recibir notificaciones por correo" class="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500">
+                        <label for="Deseo recibir notificaciones por correo" class="ml-2 block text-sm text-gray-700">Deseo recibir notificaciones por correo</label>
+                    </div>
+                
+            
+                
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Género</label>
+                        
+                            <div class="flex items-center">
+                                <input type="radio" id="opcion 1" name="Género" value="opcion 1" class="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500">
+                                <label for="opcion 1" class="ml-2 text-sm text-gray-700">opcion 1</label>
+                            </div>
+                        
+                            <div class="flex items-center">
+                                <input type="radio" id="opcion 2" name="Género" value="opcion 2" class="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500">
+                                <label for="opcion 2" class="ml-2 text-sm text-gray-700">opcion 2</label>
+                            </div>
+                        
+                            <div class="flex items-center">
+                                <input type="radio" id="otro" name="Género" value="otro" class="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500">
+                                <label for="otro" class="ml-2 text-sm text-gray-700">otro</label>
+                            </div>
+                        
+                    </div>
+                
+            
+                
+                    <button type="button" class="px-4 py-2 bg-indigo-600 text-white rounded-md shadow hover:bg-indigo-700">Guardar cambios</button>
+                
+            
+            
+        </form>
+    </div>
+    <!-- Scripts externos -->
+    
+        <script src="https://example.com/script.js"></script>
+    
+</body>
+</html>

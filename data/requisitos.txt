@@ -1,0 +1,198 @@
+Característica: Gestión de usuarios
+  Como administrador
+  Quiero poder agregar nuevos usuarios
+  Para que puedan acceder al sistema
+
+Escenario: Agregar un nuevo usuario exitosamente
+  Dado que estoy en la página de gestión de usuarios
+  Y he ingresado un nombre de usuario válido
+  Y he ingresado una contraseña válida
+  Cuando hago clic en el botón "Agregar usuario"
+  Entonces debería ver un mensaje de confirmación
+  Y el nuevo usuario debería aparecer en la lista de usuarios
+
+Escenario: Error al agregar un usuario sin nombre
+  Dado que estoy en la página de gestión de usuarios
+  Y no he ingresado un nombre de usuario
+  Cuando hago clic en el botón "Agregar usuario"
+  Entonces debería ver un mensaje de error indicando que el nombre de usuario es obligatorio
+
+-----------------------------------------------------------------------------------------------
+
+Característica: Registro de usuarios
+  Como visitante
+  Quiero registrarme en la plataforma
+  Para acceder a las funcionalidades exclusivas
+
+  Escenario: Registro exitoso
+    Dado que estoy en la página de registro
+    Y he ingresado mi nombre en el campo de texto "Nombre"
+    Y he ingresado mi correo en el campo de texto "Correo electrónico"
+    Y he ingresado mi contraseña en el campo de texto "Contraseña"
+    Y he marcado la casilla de verificación "Acepto los términos y condiciones"
+    Cuando hago clic en el botón "Registrarme"
+    Entonces debería ver un mensaje de confirmación
+
+-----------------------------------------------------------------------------------------------
+
+
+Característica: Encuesta de satisfacción
+  Como usuario
+  Quiero completar una encuesta
+  Para proporcionar mi opinión sobre el servicio
+
+  Escenario: Completar encuesta
+    Dado que estoy en la página de encuesta
+    Y he ingresado mi nombre en el campo de texto "Nombre"
+    Y he seleccionado una opción en el botón de opción "Nivel de satisfacción"
+    Y he marcado la casilla de verificación "Deseo recibir notificaciones"
+    Cuando hago clic en el botón "Enviar encuesta"
+    Entonces debería ver un mensaje de agradecimiento
+
+-----------------------------------------------------------------------------------------------
+
+
+Característica: Búsqueda avanzada de productos
+  Como cliente
+  Quiero filtrar productos por categoría y precio
+  Para encontrar lo que necesito más rápido
+
+  Escenario: Filtrar productos
+    Dado que estoy en la página de búsqueda avanzada
+    Y he ingresado un término en el campo de texto "Buscar"
+    Y he seleccionado una categoría en la lista desplegable "Categoría"
+    Y he ingresado un rango de precios en el campo de texto "Precio mínimo" y "Precio máximo"
+    Y he marcado la casilla de verificación "Solo productos en oferta"
+    Cuando hago clic en el botón "Buscar"
+    Entonces debería ver una lista de productos filtrados
+
+-----------------------------------------------------------------------------------------------
+
+
+Característica: Configuración de perfil
+  Como usuario registrado
+  Quiero actualizar mi información personal
+  Para mantener mi perfil actualizado
+
+  Escenario: Actualizar perfil
+    Dado que estoy en la página de configuración de perfil
+    Y he ingresado mi nuevo nombre en el campo de texto "Nombre"
+    Y he ingresado mi nueva dirección en el campo de texto "Dirección"
+    Y he seleccionado mi género en el botón de opción "Género"
+    Y he marcado la casilla de verificación "Deseo recibir notificaciones por correo"
+    Cuando hago clic en el botón "Guardar cambios"
+    Entonces debería ver un mensaje de confirmación
+
+-----------------------------------------------------------------------------------------------
+
+
+Característica: Inicio de sesión
+  Como usuario registrado
+  Quiero iniciar sesión en mi cuenta
+  Para acceder a mis datos personales
+
+  Escenario: Inicio de sesión exitoso
+    Dado que estoy en la página de inicio de sesión
+    Y he ingresado mi correo en el campo de texto "Correo electrónico"
+    Y he ingresado mi contraseña en el campo de texto "Contraseña"
+    Cuando hago clic en el botón "Iniciar sesión"
+    Entonces debería ser redirigido a mi panel de usuario
+
+-----------------------------------------------------------------------------------------------
+
+  Característica: Reserva de citas
+  Como cliente
+  Quiero reservar una cita en línea
+  Para evitar filas en la oficina
+
+  Escenario: Reservar una cita
+    Dado que estoy en la página de reserva de citas
+    Y he ingresado mi nombre en el campo de texto "Nombre"
+    Y he ingresado mi número de teléfono en el campo de texto "Teléfono"
+    Y he seleccionado una fecha en el campo de texto "Fecha"
+    Y he seleccionado una hora en la lista desplegable "Hora"
+    Cuando hago clic en el botón "Reservar cita"
+    Entonces debería ver un mensaje de confirmación con los detalles de la cita
+
+
+
+
+  Característica: Reserva de citas
+  Como cliente
+  Quiero reservar una cita en línea
+  Para evitar filas en la oficina
+
+  Escenario: Reservar una cita
+    Dado que estoy en la página de reserva de citas
+    Y he ingresado mi nombre en el campo de texto "Nombre"
+    Y he ingresado mi número de teléfono en el campo de texto "Teléfono"
+    Y he seleccionado una fecha en el campo de fecha "Fecha"
+    Y he seleccionado una hora en el campo de hora "Hora"
+    Cuando hago clic en el botón "Reservar cita"
+    Entonces debería ver un mensaje de confirmación con los detalles de la cita
+
+-----------------------------------------------------------------------------------------------
+
+Característica: Formulario de contacto
+  Como visitante
+  Quiero enviar un mensaje al soporte
+  Para resolver mis dudas
+
+  Escenario: Enviar mensaje
+    Dado que estoy en la página de contacto
+    Y he ingresado mi nombre en el campo de texto "Nombre"
+    Y he ingresado mi correo en el campo de texto "Correo electrónico"
+    Y he ingresado mi mensaje en el campo de texto "Mensaje"
+    Cuando hago clic en el botón "Enviar"
+    Entonces debería ver un mensaje de confirmación indicando que mi mensaje fue enviado
+
+
+-----------------------------------------------------------------------------------------------
+
+Característica: Registro de eventos
+  Como organizador
+  Quiero registrar nuevos eventos
+  Para que los participantes puedan inscribirse
+
+  Escenario: Registrar un evento
+    Dado que estoy en la página de registro de eventos
+    Y he ingresado el nombre del evento en el campo de texto "Nombre del evento"
+    Y he ingresado la fecha del evento en el campo de texto "Fecha"
+    Y he ingresado una descripción en el campo de texto "Descripción"
+    Y he marcado la casilla de verificación "Evento público"
+    Cuando hago clic en el botón "Registrar evento"
+    Entonces debería ver un mensaje de confirmación
+
+-----------------------------------------------------------------------------------------------
+
+
+Característica: Configuración de notificaciones
+  Como usuario
+  Quiero configurar mis preferencias de notificaciones
+  Para recibir solo la información que me interesa
+
+  Escenario: Configurar notificaciones
+    Dado que estoy en la página de configuración de notificaciones
+    Y he marcado la casilla de verificación "Recibir notificaciones por correo"
+    Y he marcado la casilla de verificación "Recibir notificaciones por SMS"
+    Cuando hago clic en el botón "Guardar preferencias"
+    Entonces debería ver un mensaje indicando que las preferencias fueron actualizadas
+
+
+
+
+-----------------------------------------------------------------------------------------------
+
+
+  Característica: Solicitud de soporte técnico
+  Como usuario
+  Quiero enviar una solicitud de soporte
+  Para resolver problemas técnicos
+
+  Escenario: Enviar solicitud
+    Dado que estoy en la página de soporte técnico
+    Y he ingresado mi nombre en el campo de texto "Nombre"
+    Y he ingresado mi correo en el campo de texto "Correo electrónico"
+    Y he ingresado una descripción del problema en el campo de texto "Descripción del problema"
+    Cuando hago clic en el botón "Enviar solicitud"
+    Entonces debería ver un mensaje indicando que mi solicitud fue recibida

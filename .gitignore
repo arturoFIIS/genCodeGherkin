@@ -9,3 +9,6 @@ __pycache__/
 # Archivos del sistema
 .DS_Store
 Thumbs.db
+
+# ignorar la carpeta "salida" y su contenido
+salida/
